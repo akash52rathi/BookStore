@@ -15,40 +15,40 @@ public class BookController {
     private BookService service;
 
     // Create APi
-    @PostMapping("/addbooks")
+    @PostMapping("/addBook")
     public Book addProduct(@RequestBody Book book) {
         return service.saveProduct(book);
     }
 
     // Read Api
-    @GetMapping("/books")
+    @GetMapping("/getAllBooks")
     public List<Book> findAllProducts() {
         return service.getProducts();
     }
     // Read Api By Name
-    @GetMapping("/books/{name}")
+    @GetMapping("/bookByName/{name}")
     public Book findProductByName(@PathVariable  String name) {
         return service.getproductByname(name);
     }
     // Read Api By ID
-    @GetMapping("/book/{id}")
+    @GetMapping("/bookById/{id}")
     public  Book findProductById(@PathVariable int id)
     {
         return  service.getProductById(id);
     }
     // Fetch By List of Ids:
-    @PostMapping("/getbooks")
+    @PostMapping("/booksByIds")
     public List<Book> getProductByIds(@RequestBody List<Integer> listOfIds) {
         return service.getProductByIds(listOfIds);
     }
     // Delete Api
-    @DeleteMapping("/books/{id}")
+    @DeleteMapping("/deleteBook/{id}")
     public  String deleteProduct(@PathVariable int id)
     {
         return service.deleteProduct(id);
     }
     // Update APi
-    @PutMapping("/books/{id}")
+    @PutMapping("/updateBook")
     public String updateProduct(@RequestBody Book book)
     {
         return service.updateProduct(book);
