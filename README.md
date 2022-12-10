@@ -1,7 +1,7 @@
 # BookStore
 ## Prerequisites 
 1  Java 8  
-2  Spring Boot 2.6.6
+2  Spring Boot 2.7.6
 
 ## Steps To Set Up and Run Project:
 1. Run "mvn clean install" in root directory
